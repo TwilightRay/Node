@@ -25,9 +25,10 @@ var liebe = "\
 \n─╚╝╚══╩══╩══╩═══╝╚═╩╝╚╝";
 // console.log(liebe);
 let currentDate = new Date();
-module.exports.date = currentDate;
- 
-module.exports.getMessage = function(name){
+//module.exports.date = currentDate;
+global.date = currentDate;
+
+module.exports.getMessage = function(){
     let hour = currentDate.getHours();
     if(hour > 16)
         return "Добрый вечер, " + name;
@@ -36,3 +37,4 @@ module.exports.getMessage = function(name){
     else
         return "Доброе утро, " + name;
 }
+
